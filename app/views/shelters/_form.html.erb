@@ -1,0 +1,15 @@
+<%= simple_form_for(@shelter) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :shelter %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :source %>
+    <%= f.input :phone %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

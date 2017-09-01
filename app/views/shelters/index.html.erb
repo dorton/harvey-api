@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shelters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>County</th>
+      <th>Shelter Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Pets</th>
+      <th>Phone</th>
+      <th>Accepting</th>
+      <th>last_updated</th>
+      <th>updated_by</th>
+      <th>notes</th>
+      <th>volunteer_needs</th>
+      <th>Lat/Long</th>
+      <th>supply_needs</th>
+      <th>source</th>
+      <th>address_name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shelters.each do |shelter| %>
+      <tr>
+        <td><%= shelter.county %></td>
+        <td><%= shelter.shelter %></td>
+        <td><%= shelter.address %></td>
+        <td><%= shelter.city %></td>
+        <td><%= shelter.pets %></td>
+        <td><%= shelter.phone %></td>
+        <td><%= shelter.accepting %></td>
+        <td><%= shelter.last_updated %></td>
+        <td><%= shelter.updated_by %></td>
+        <td><%= shelter.notes %></td>
+        <td><%= shelter.volunteer_needs %></td>
+        <td><%= shelter.latitude %> <%= shelter.longitude %></td>
+        <td><%= shelter.supply_needs %></td>
+        <td><%= shelter.source %></td>
+        <td><%= shelter.address_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shelter', new_shelter_path %>
