@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  root to: redirect("https://github.com/sketch-city/harvey-api")
+  get 'home/index'
+  resources :shelters
+  resources :needs
+  get 'shelter_info', to: 'needs#shelter_info', as: 'new_shelter_info'
+
+  root to: 'home#index'
   namespace :api do
     namespace :v1 do
 
