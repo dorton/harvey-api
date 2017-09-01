@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get 'home/index'
   resources :shelters
   resources :needs
-  get 'shelter_info', to: 'needs#shelter_info', as: 'new_shelter_info'
 
   root to: 'home#index'
   namespace :api do

@@ -5,10 +5,6 @@ class NeedsController < ApplicationController
     @needs = Need.all
   end
 
-  def shelter_info
-    @need = Need.new
-  end
-
   def new
     @need = Need.new
   end
