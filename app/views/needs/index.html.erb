@@ -1,0 +1,35 @@
+<h1>Needs</h1>
+
+<table class="table">
+  <tr>
+    <th>updated_by</th>
+    <th>timestamp</th>
+    <th>location_name</th>
+    <th>location_address</th>
+    <th>Lat Long</th>
+    <th>contact_for_this_location_name</th>
+    <th>contact_for_this_location_phone_number</th>
+    <th>tell_us_about_the_volunteer_needs</th>
+    <th>are_supplies_needed</th>
+    <th>tell_us_about_the_supply_needs</th>
+    <th>anything_else_you_would_like_to_tell_us</th>
+    <th>source</th>
+    <th></th>
+  </tr>
+  <% @needs.each do |need| %>
+    <tr>
+      <td><%= need.updated_by %></td>
+      <td><%= need.timestamp %></td>
+      <td><%= need.location_name %></td>
+      <td><%= need.location_address %></td>
+      <td><%= need.latitude %> <%= need.longitude %></td>
+      <td><%= need.contact_for_this_location_name %></td>
+      <td><%= need.are_volunteers_needed %></td>
+      <td><%= need.tell_us_about_the_volunteer_needs %></td>
+      <td><%= need.are_supplies_needed %></td>
+      <td><%= need.tell_us_about_the_supply_needs %></td>
+      <td><%= need.anything_else_you_would_like_to_tell_us %></td>
+      <td><%= need.source %></td>
+    </tr>
+  <% end %>
+</table>
