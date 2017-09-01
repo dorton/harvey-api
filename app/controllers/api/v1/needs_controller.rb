@@ -1,4 +1,4 @@
-class Api::V1::NeedsController < ApplicationController
+class Api::V1::NeedsController < ApiController
 
   def index
       @filters = {}

@@ -1,4 +1,4 @@
-class Api::V1::SheltersController < ApplicationController
+class Api::V1::SheltersController < ApiController
 
   def index
     @filters = {}

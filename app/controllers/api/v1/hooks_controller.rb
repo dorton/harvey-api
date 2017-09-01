@@ -1,4 +1,4 @@
-class Api::V1::HooksController < ApplicationController
+class Api::V1::HooksController < ApiController
 
   def sheet_update
     ImportNeedsJob.perform_later
